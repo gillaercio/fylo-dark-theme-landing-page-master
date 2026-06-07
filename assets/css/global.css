@@ -1,0 +1,56 @@
+*,
+:before,
+:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/raleway-v37-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/raleway-v37-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans-v44-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/open-sans-v44-latin-700.woff2') format('woff2');
+}
+
+:root {
+  --Navy-850: hsl(217, 28%, 15%);
+  --Navy-900: hsl(218, 28%, 13%);
+  --Navy-950: hsl(216, 53%, 9%);
+  --Navy-800: hsl(219, 30%, 18%);
+  
+  --Teal-200: hsl(176, 68%, 64%);
+  --Cyan-500: hsl(198, 60%, 50%);
+  --Red-500: hsl(0, 100%, 63%);
+  
+  --White: hsl(0, 0%, 100%);
+}
