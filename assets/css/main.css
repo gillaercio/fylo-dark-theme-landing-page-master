@@ -1,3 +1,278 @@
 body {
-  background-color: green;
+  display: grid;
+  align-items: center;
+  color: var(--White);
+}
+
+.header,
+main,
+.footer {
+  justify-self: center;
+  width: min(100%, 33.5rem);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--Navy-800);
+}
+
+.header__logo {
+  width: 8rem;
+}
+
+.header__nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  font: var(--text-nav);
+  cursor: pointer;
+}
+
+main {
+  text-align: center;
+  background-color: var(--Navy-900);
+}
+
+.hero {
+  display: grid;
+}
+
+.hero__content {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  padding-top: 2rem;
+  background: url("../images/bg-curvy-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center 50%;
+  background-size: stretch;
+  background-color: var(--Navy-800);
+}
+
+.hero__title {
+  padding: 0.5rem 2.2rem 0rem 2.2rem;
+  font: var(--text-title);
+}
+  
+.hero__description-start {
+  display: grid;
+  gap: 2rem;
+  padding-bottom: 6.4rem;
+  background-color: var(--Navy-900);
+}
+
+.hero__description {
+  padding-inline: 4rem;
+}
+
+.hero__description,
+.hero__button {
+  background-color: var(--Navy-900);
+}
+
+.hero__description,
+.feature-card__description,
+.productive__description,
+.productive__link,
+.early-access__description,
+.footer {
+  font: var(--text-description);
+}
+
+.hero__button {
+  width: 24rem;
+  padding: 2rem;
+  justify-self: center;
+  text-decoration: none;
+  /* background-color: var(--Teal-200); */
+  background-color: var(--Cyan-500);
+  border-radius: 3rem;
+}
+
+.hero__button,
+.early-access__button {
+  font: var(--text-button);
+  color: var(--White);
+}
+
+.hero__image,
+.productive__image {
+  width: 27rem;
+}
+
+.features {
+  display: grid;
+  gap: 3rem;
+  padding: 4rem;
+}
+
+.feature-card {
+  display: grid;
+  gap: 2rem;
+}
+
+.feature-card__icon {
+  width: 4rem;
+  justify-self: center;
+}
+
+.feature-card__title,
+.productive__title,
+.early-access__title {
+  font: var(--text-subtitle);
+}
+
+.productive {
+  display: grid;
+  gap: 3rem;
+  padding-top: 2rem;
+  justify-items: center;
+}
+
+.productive__content {
+  display: grid;
+  gap: 2rem;
+  padding-inline: 3rem;
+  text-align: left;
+}
+
+.productive__link {
+  display: flex;
+  gap: 0.5rem;
+  width: 13.4rem;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  color: var(--Teal-200);
+  border-bottom: 1px solid var(--Teal-200);
+}
+
+.testimonials {
+  display: grid;
+  gap: 2rem;
+  padding: 6rem 3.8rem 0 3.8rem;
+  background-image: url("../images/bg-quotes.png");
+  background-repeat: no-repeat;
+  background-size: 2.5rem;
+  background-position: top 3.8rem left 4rem;
+}
+
+.testimonial-card {
+  display: grid;
+  gap: 2rem;
+  padding: 1.8rem;
+  text-align: left;
+  line-height: 1.8rem;
+  background-color: var(--Navy-800);
+  border-radius: 0.6rem;
+}
+
+.testimonial-card__text {
+  font: var(--text-testimonial);
+}
+
+.testimonial-card__author {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.testimonial-card__avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.testimonial-card__role,
+.early-access__input {
+  font: var(--text-input);
+}
+
+.testimonial-card__name {
+  font: var(--text-card-name);
+  font-weight: 900;
+}
+
+.early-access {
+  position: relative;
+  top: 8rem;
+  display: grid;
+  gap: 2rem;
+  justify-self: center;
+  width: 88%;
+  padding: 3rem;
+  background-color: var(--Navy-850);
+  border-radius: 0.6rem;
+  box-shadow: 5px 5px 4px var(--Navy-950);
+}
+
+.early-access__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.early-access__input,
+.early-access__button {
+  padding: 1.4rem;
+  border-radius: 3rem;
+  border: none;
+}
+
+.early-access__button {
+  color: var(--White);
+  background-color: var(--Cyan-500);
+  cursor: pointer;
+}
+
+.footer {
+  display: grid;
+  gap: 2rem;
+  padding: 12rem 3rem 3rem 3rem;
+  background-color: var(--Navy-950);
+}
+
+.footer__logo {
+  padding: 1.5rem;
+}
+
+.footer__content,
+.footer__contact {
+  display: grid;
+  gap: 2rem;
+}
+
+.footer__location,
+.footer__contact-item {
+  display: flex;
+  gap: 3rem;
+}
+
+.footer__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer__links {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.footer__links li {
+  cursor: pointer;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1rem;
+  padding-top: 4rem;
+  justify-content: center;
+}
+
+.footer__social-link img {
+  width: 2rem;
+  background-color: var(--White);
+  border-radius: 50%;
 }

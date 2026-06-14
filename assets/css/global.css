@@ -10,6 +10,10 @@ html {
   font-size: 62.5%;
 }
 
+ul {
+  list-style: none;
+}
+
 @font-face {
   font-display: swap;
   font-family: 'Raleway';
@@ -53,4 +57,16 @@ html {
   --Red-500: hsl(0, 100%, 63%);
   
   --White: hsl(0, 0%, 100%);
+
+  --raleway: 'Raleway', sans-serif;
+  --open-sans: 'Open Sans', sans-serif;
+
+  --text-title: 700 2rem/120% var(--raleway);
+  --text-subtitle: 700 1.4rem/120% var(--open-sans);
+  --text-nav: 700 1.2rem/150% var(--open-sans);
+  --text-description: 1.2rem/150% var(--open-sans);
+  --text-button: 700 1.2rem/150% var(--raleway);
+  --text-testimonial: 1rem/150% var(--raleway);
+  --text-card-name: 700 1.1rem/150% var(--raleway);
+  --text-input: 1rem/150% var(--open-sans);
 }
