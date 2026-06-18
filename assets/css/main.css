@@ -1,6 +1,6 @@
 body {
-  display: grid;
-  align-items: center;
+  /* display: grid; */
+  /* align-items: center; */
   color: var(--White);
 }
 
@@ -47,7 +47,7 @@ main {
   background: url("../images/bg-curvy-mobile.svg");
   background-repeat: no-repeat;
   background-position: center 50%;
-  background-size: stretch;
+  /* background-size: stretch; */
   background-color: var(--Navy-800);
 }
 
@@ -56,7 +56,7 @@ main {
   font: var(--text-title);
 }
   
-.hero__description-start {
+.hero__body {
   display: grid;
   gap: 2rem;
   padding-bottom: 6.4rem;
@@ -64,7 +64,7 @@ main {
 }
 
 .hero__description {
-  padding-inline: 4rem;
+  padding-inline: 2.2rem;
 }
 
 .hero__description,
@@ -104,8 +104,9 @@ main {
 
 .features {
   display: grid;
-  gap: 3rem;
-  padding: 4rem;
+  gap: 5rem;
+  padding: 4rem 1.5rem;
+  /* border: 1px solid red; */
 }
 
 .feature-card {
@@ -114,8 +115,10 @@ main {
 }
 
 .feature-card__icon {
-  width: 4rem;
+  /* width: 4rem; */
   justify-self: center;
+
+  width: 6rem;
 }
 
 .feature-card__title,
@@ -123,6 +126,11 @@ main {
 .early-access__title {
   font: var(--text-subtitle);
 }
+
+/* .feature-card__description {
+  padding-inline: 0.7rem;
+  border: 1px solid red;
+} */
 
 .productive {
   display: grid;
@@ -139,9 +147,10 @@ main {
 }
 
 .productive__link {
-  display: flex;
+  display: inline-flex;
+  justify-self: start;
+  align-items: center;
   gap: 0.5rem;
-  width: 13.4rem;
   padding-bottom: 0.5rem;
   text-decoration: none;
   color: var(--Teal-200);
@@ -156,6 +165,8 @@ main {
   background-repeat: no-repeat;
   background-size: 2.5rem;
   background-position: top 3.8rem left 4rem;
+
+  line-height: 1.8rem;
 }
 
 .testimonial-card {
@@ -204,7 +215,8 @@ main {
   padding: 3rem;
   background-color: var(--Navy-850);
   border-radius: 0.6rem;
-  box-shadow: 5px 5px 4px var(--Navy-950);
+
+  box-shadow: 0 6px 12px var(--Navy-950);
 }
 
 .early-access__form {
@@ -271,8 +283,19 @@ main {
   justify-content: center;
 }
 
-.footer__social-link img {
-  width: 2rem;
-  background-color: var(--White);
+.footer__social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 3.2rem;
+  height: 3.2rem;
+  
+  border: 1px solid var(--White);
   border-radius: 50%;
+}
+
+.footer__social-link ion-icon {
+  font-size: 1.6rem;
+  color: var(--White);
 }
