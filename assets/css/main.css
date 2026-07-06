@@ -346,3 +346,24 @@ main {
 .footer__social-link i {
   font-size: 1.2rem;
 }
+
+@media screen and (min-width: 1024px) {
+  /* body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 740px;
+    padding: 5rem;
+  } */
+
+  .header,
+  main,
+  .footer {
+    justify-self: center;
+    width: min(100%, 74rem);
+  }
+
+  .hero__title {
+    padding: 0.5rem 12rem 0rem 12rem;
+  }
+}
