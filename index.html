@@ -13,20 +13,20 @@
 </head>
 <body>
   <header class="header">
-    <img class="header__logo" src="assets/images/logo.svg" alt="">
+    <img class="header__logo" src="assets/images/logo.svg" alt="Fylo logo">
     <nav class="header__nav">
       <ul>
-        <li>Features</li>
-        <li>Team</li>
-        <li>Sign In</li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Sign In</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero__content">
-        <img class="hero__image" src="assets/images/illustration-intro.png" alt="">
+      <article class="hero__content">
+        <img class="hero__image" src="assets/images/illustration-intro.png" alt="Illustration showing secure file storage">
         <h1 class="hero__title">All your files in one secure location, accessible anywhere.</h1>
         <div class="hero__body">
           <p class="hero__description">
@@ -37,10 +37,11 @@
             Get Started
           </a>
         </div>
-      </div>
+      </article>
     </section>
 
     <section class="features">
+      <h2 class="sr-only">Features</h2>
       <article class="feature-card">
         <img class="feature-card__icon" src="assets/images/icon-access-anywhere.svg" alt="">
         <h3 class="feature-card__title">Access your files, anywhere</h3>
@@ -81,7 +82,7 @@
     <section class="productive">
       <img class="productive__image" src="assets/images/illustration-stay-productive.png" alt="">
       
-      <div class="productive__content">
+      <article class="productive__content">
         <h2 class="productive__title">Stay productive, wherever you are</h2>
         
         <p class="productive__description">
@@ -97,47 +98,57 @@
           See how Fylo works
           <i class="fa-solid fa-circle-arrow-right"></i>
         </a>
-      </div>
+      </article>
     </section>
 
     <section class="testimonials">
+      <h2 class="sr-only">Testimonials</h2>
       <article class="testimonial-card">
+        <h3 class="sr-only">
+            Testimonial by Satish Patel
+        </h3>
         <p class="testimonial-card__text">
           Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
           become a well-oiled collaboration machine.
         </p>
         <div class="testimonial-card__author">
-          <img class="testimonial-card__avatar" src="assets/images/profile-1.jpg" alt="">
+          <img class="testimonial-card__avatar" src="assets/images/profile-1.jpg" alt="Portrait of Satish Patel">
           <div class="testimonial-card__info">
-            <h4 class="testimonial-card__name">Satish Patel</h4>
+            <strong class="testimonial-card__name">Satish Patel</strong>
             <p class="testimonial-card__role">Founder & CEO, Huddle</p>
           </div>
         </div>
       </article>
 
       <article class="testimonial-card">
+        <h3 class="sr-only">
+            Testimonial by Bruce McKenzie
+        </h3>
         <p class="testimonial-card__text">
           Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
           become a well-oiled collaboration machine.
         </p>
         <div class="testimonial-card__author">
-          <img class="testimonial-card__avatar" src="assets/images/profile-2.jpg" alt="">
+          <img class="testimonial-card__avatar" src="assets/images/profile-2.jpg" alt="Portrait of Bruce McKenzie">
           <div class="testimonial-card__info">
-            <h4 class="testimonial-card__name">Bruce McKenzie</h4>
+            <strong class="testimonial-card__name">Bruce McKenzie</strong>
             <p class="testimonial-card__role">Founder & CEO, Huddle</p>
           </div>
         </div>
       </article>
 
       <article class="testimonial-card">
+        <h3 class="sr-only">
+            Testimonial by Iva Boyd
+        </h3>
         <p class="testimonial-card__text">
           Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
           become a well-oiled collaboration machine.
         </p>
         <div class="testimonial-card__author">
-          <img class="testimonial-card__avatar" src="assets/images/profile-3.jpg" alt="">
+          <img class="testimonial-card__avatar" src="assets/images/profile-3.jpg" alt="Portrait of Iva Boyd">
           <div class="testimonial-card__info">
-            <h4 class="testimonial-card__name">Iva Boyd</h4>
+            <strong class="testimonial-card__name">Iva Boyd</strong>
             <p class="testimonial-card__role">Founder & CEO, Huddle</p>
           </div>
         </div>
@@ -169,7 +180,7 @@
     <img
       class="footer__logo"
       src="assets/images/logo.svg"
-      alt=""
+      alt="Fylo logo"
     >
 
     <div class="footer__content">
@@ -213,16 +224,16 @@
       </div>
 
       <ul class="footer__links">
-        <li>About Us</li>
-        <li>Jobs</li>
-        <li>Press</li>
-        <li>Blog</li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Blog</a></li>
       </ul>
 
       <ul class="footer__links">
-        <li>Contact Us</li>
-        <li>Terms</li>
-        <li>Privacy</li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
       </ul>
 
       <div class="footer__social">
