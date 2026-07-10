@@ -12,7 +12,7 @@ main,
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2.4rem;
   background-color: var(--Navy-800);
 }
 
@@ -39,70 +39,82 @@ main,
 
 main {
   text-align: center;
-  background-color: var(--Navy-950);
+  background-color: var(--Navy-900);
 }
 
+/* .hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--Navy-800);
+} */
 .hero {
-  display: grid;
-  
-  background: url("../images/bg-curvy-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center 40%;
-  background-size: auto;
   background-color: var(--Navy-800);
 }
 
+.hero__image {
+  display: block;
+  width: 90%;
+  margin-inline: auto;
+  position: relative;
+  z-index: 3;
+}
+
+.hero__curve {
+  display: block;
+  width: 100%;
+  margin-top: -2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* .hero__content {
+  display: grid;
+  justify-items: center;
+  gap: 2rem;
+  
+  background-color: var(--Navy-900);
+  position: relative;
+  z-index: 2;
+} */
 .hero__content {
   display: grid;
   justify-items: center;
   gap: 2rem;
-  padding-top: 2rem;
-  /* background: url("../images/bg-curvy-mobile.svg");
-  background-repeat: no-repeat;
-  background-position: center 50%;
-  background-color: var(--Navy-800); */
+  
+  background-color: var(--Navy-900);
+  padding: 2rem 2.2rem 6rem;
 }
 
-.hero__title {
-  padding: 0.5rem 2.2rem 0rem 2.2rem;
+/* .hero__title {
   font: var(--text-title);
-  background: linear-gradient(to bottom, transparent, var(--Navy-950));
-  /* border: 1px solid red; */
-}
-  
-.hero__body {
-  display: grid;
-  gap: 2rem;
-  padding: 2rem 0 6.4rem 0;
-  /* padding-bottom: 6.4rem; */
-  margin-top: -2rem;
-  background-color: var(--Navy-950);
+} */
+.hero__title {
+  margin-top: -8rem;
+  font: var(--text-title);
+  position: relative;
+  z-index: 2;
 }
 
 .hero__description {
-  padding-inline: 2.2rem;
   font: var(--text-description);
-  /* border: 1px solid red; */
-}
 
-/* .hero__description,
-.hero__button {
-  background-color: var(--Navy-900);
-} */
+  padding-top: 2rem;
+}
 
 .hero__button {
   width: 24rem;
-  padding: 2rem;
+  padding: 1.7rem 0;
   justify-self: center;
   text-decoration: none;
-  background-color: var(--Cyan-500);
+  background: linear-gradient(90deg, var(--Teal-200),var(--Cyan-500));
   border-radius: 3rem;
-  transition: background-color 0.3s;
+  transition: filter 0.3s;
 }
 
 .hero__button:hover,
 .early-access__button:hover {
   background-color: var(--Teal-200);
+  filter: brightness(1.15);
 }
 
 .hero__button,
@@ -111,7 +123,6 @@ main {
   color: var(--White);
 }
 
-.hero__image,
 .productive__image {
   width: 27rem;
 }
@@ -183,6 +194,7 @@ main {
   text-decoration: none;
   color: var(--Teal-200);
   border-bottom: 1px solid var(--Teal-200);
+  border-color: currentColor;
   transition: 0.3s;
 }
 
@@ -210,6 +222,8 @@ main {
   line-height: 1.8rem;
   background-color: var(--Navy-800);
   border-radius: 0.6rem;
+
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
 }
 
 .testimonial-card__text {
@@ -240,15 +254,15 @@ main {
 
 .early-access {
   position: relative;
-  top: 10rem;
+  top: 15rem;
   display: grid;
   gap: 2rem;
   justify-self: center;
   width: 88%;
   padding: 3rem;
-  background-color: var(--Navy-900);
+  background-color: var(--Navy-850);
   border-radius: 0.6rem;
-  box-shadow: 0 6px 12px var(--Navy-950);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .early-access__description {
@@ -270,7 +284,7 @@ main {
 
 .early-access__button {
   color: var(--White);
-  background-color: var(--Cyan-500);
+  background: linear-gradient(90deg, var(--Teal-200),var(--Cyan-500));
   transition: background-color 0.3s;
   cursor: pointer;
 }
@@ -278,13 +292,14 @@ main {
 .footer {
   display: grid;
   gap: 2rem;
-  padding: 12rem 3rem 3rem 3rem;
+  padding: 17rem 3rem 3rem 3rem;
   font: var(--text-description);
+  /* background-color: var(--Navy-800); */
   background-color: var(--Navy-950);
 }
 
 .footer__logo {
-  padding: 1.5rem;
+  padding: 2rem;
 }
 
 .footer__content,
@@ -378,11 +393,7 @@ main {
     background: url("../images/bg-curvy-desktop.svg");
     background-repeat: no-repeat;
     background-position: 50% 150%;
-    /* background-size: contain; */
     background-color: var(--Navy-800);
-    /* border: 1px solid red; */
-    /* border-top-color: var(--Navy-900); */
-    border-color: red;
   }
 
   .hero__image {
@@ -392,7 +403,6 @@ main {
   .hero__title {
     width: 76rem;
     font-size: clamp(2.3rem, 6vw, 4.2rem);
-    /* border: 1px solid red; */
   }
   
   .hero__description {
