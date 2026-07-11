@@ -42,11 +42,6 @@ main {
   background-color: var(--Navy-900);
 }
 
-/* .hero {
-  position: relative;
-  overflow: hidden;
-  background: var(--Navy-800);
-} */
 .hero {
   background-color: var(--Navy-800);
 }
@@ -67,15 +62,6 @@ main {
   z-index: 2;
 }
 
-/* .hero__content {
-  display: grid;
-  justify-items: center;
-  gap: 2rem;
-  
-  background-color: var(--Navy-900);
-  position: relative;
-  z-index: 2;
-} */
 .hero__content {
   display: grid;
   justify-items: center;
@@ -85,9 +71,6 @@ main {
   padding: 2rem 2.2rem 6rem;
 }
 
-/* .hero__title {
-  font: var(--text-title);
-} */
 .hero__title {
   margin-top: -8rem;
   font: var(--text-title);
@@ -375,18 +358,27 @@ main {
 
 @media screen and (min-width: 1024px) {
   body {
-    background-color: black;
+    background-color: var(--Navy-950);
   }
 
   .header,
   main,
   .footer {
     justify-self: center;
-    width: min(100%, 144rem);
+    width: min(100%, 102.4rem);
+  }
+
+  .header {
+    padding: 4rem;
   }
 
   .header__logo {
     width: 12rem;
+  }
+
+  .header__nav ul {
+    gap: 3rem;
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
   }
 
   .hero {
@@ -397,22 +389,47 @@ main {
   }
 
   .hero__image {
-    width: 45rem;
+    width: 48rem;
+  }
+
+  .hero__curve {
+    /* margin-top: 10rem; */
+    display: none;
+    /* content: none; */
+  }
+
+  .hero__content {
+    /* gap: 2.2rem; */
+    align-content: space-around;
+    /* margin-top: -40rem; */
+    margin-top: 8rem;
+    background-color: transparent;
   }
 
   .hero__title {
-    width: 76rem;
-    font-size: clamp(2.3rem, 6vw, 4.2rem);
+    width: 52rem;
+    font-size: clamp(2.3rem, 6vw, 3rem);
+
+    position: relative;
+    /* margin-top: -47rem; */
   }
   
   .hero__description {
-    width: 65rem;
-    font-size: clamp(1.4rem, 4vw, 2rem);
+    width: 48rem;
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
     background-color: var(--Navy-800);
+
+    position: relative;
+    /* top: -38rem; */
+    background-color: transparent;
+    z-index: 100;
+    /* border: 1px solid red; */
   }
 
   .hero__button {
     width: 28rem;
     font-size: clamp(1.2rem, 4vw, 1.6rem);
+
+    z-index: 100;
   }
 }
