@@ -106,10 +106,6 @@ main {
   color: var(--White);
 }
 
-.productive__image {
-  width: 27rem;
-}
-
 .features {
   display: grid;
   gap: 5rem;
@@ -154,6 +150,10 @@ main {
   gap: 3rem;
   padding-top: 2rem;
   justify-items: center;
+}
+
+.productive__image {
+  width: 27rem;
 }
 
 .productive__content {
@@ -358,7 +358,8 @@ main {
 
 @media screen and (min-width: 1024px) {
   body {
-    background-color: var(--Navy-950);
+    /* background-color: var(--Navy-950); */
+    background-color: white;
   }
 
   .header,
@@ -393,15 +394,12 @@ main {
   }
 
   .hero__curve {
-    /* margin-top: 10rem; */
     display: none;
-    /* content: none; */
   }
 
   .hero__content {
     /* gap: 2.2rem; */
     align-content: space-around;
-    /* margin-top: -40rem; */
     margin-top: 8rem;
     background-color: transparent;
   }
@@ -423,7 +421,6 @@ main {
     /* top: -38rem; */
     background-color: transparent;
     z-index: 100;
-    /* border: 1px solid red; */
   }
 
   .hero__button {
@@ -431,5 +428,141 @@ main {
     font-size: clamp(1.2rem, 4vw, 1.6rem);
 
     z-index: 100;
+  }
+
+  .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    justify-items: center;
+  }
+
+  .feature-card {
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .feature-card__icon {
+    height: fit-content;
+  }
+
+  .feature-card__description {
+    width: 38rem;
+  }
+
+  .productive {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+    padding: 6rem 2.4rem;
+  }
+
+  .productive__image {
+    width: 44rem;
+  }
+
+  .productive__content {
+    display: grid;
+    gap: 1.2rem;
+    padding-inline: 0rem;
+  }
+
+  .productive__title {
+    width: 30rem;
+    font-size: clamp(1.4rem, 6vw, 2.6rem);
+  }
+
+  .testimonials {
+    background-size: 3.8rem;
+    background-position: top 7.8rem left 3.2rem;
+  }
+
+  .testimonial-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem;
+  }
+
+  .testimonial-card__text {
+    font-size: clamp(1rem, 6vw, 1.2rem);
+  }
+
+  .early-access {
+    justify-content: center;
+    top: 9rem;
+    width: 76%;
+    gap: 2.2rem;
+  }
+
+  .early-access__title {
+    font-size: clamp(1.4rem, 6vw, 2.2rem);
+  }
+
+  .early-access__description {
+    width: 74%;
+    margin-inline: auto;
+    font-size: 1.3rem;
+  }
+
+  .early-access__form {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .early-access__input {
+    width: 70%;
+  }
+
+  .early-access__button {
+    padding-inline: 1.8rem;
+  }
+
+  .footer {
+    padding: 17rem 6rem 3rem 6rem;
+  }
+
+  .footer__logo {
+    padding: 2rem 0;
+  }
+
+  .footer__content {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+  }
+
+  .footer__location,
+  .footer__contact-item {
+    gap: 1.5rem;
+  }
+
+  .footer__location .footer__text {
+    width: 30rem;
+  }
+
+  .footer__icon {
+    width: fit-content;
+  }
+
+  .footer__contact {
+    align-content: start;
+  }
+
+  .footer__links {
+    margin-top: 0;
+  }
+
+  .footer__links li {
+    width: fit-content;
+  }
+
+  .footer__social {
+    align-self: flex-start;
+    padding-top: 0;
   }
 }
