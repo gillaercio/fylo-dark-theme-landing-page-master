@@ -14,8 +14,8 @@
 <body>
   <header class="header">
     <img class="header__logo" src="assets/images/logo.svg" alt="Fylo logo">
-    <nav class="header__nav">
-      <ul>
+    <nav class="header__nav" aria-label="Main navigation">
+      <ul class="header__list">
         <li><a href="#">Features</a></li>
         <li><a href="#">Team</a></li>
         <li><a href="#">Sign In</a></li>
@@ -28,7 +28,6 @@
       <img
         class="hero__image"
         src="assets/images/illustration-intro.png" alt="Illustration showing secure file storage"
-        aria-hidden="true"
       >
       <img
         class="hero__curve"
@@ -87,7 +86,11 @@
     </section>
 
     <section class="productive">
-      <img class="productive__image" src="assets/images/illustration-stay-productive.png" alt="">
+      <img
+        class="productive__image"
+        src="assets/images/illustration-stay-productive.png"
+        alt="Illustration of a person working from anywhere"
+      >
       
       <article class="productive__content">
         <h2 class="productive__title">Stay productive, wherever you are</h2>
@@ -172,10 +175,21 @@
         questions, our support team would be happy to help you.
       </p>
 
-      <form class="early-access__form" action="">
+      <form class="early-access__form" novalidate>
+        <label
+          for="email"
+          class="sr-only"
+        >
+          Email address
+        </label>
         <input
           class="early-access__input"
-          type="email" name="" id="" placeholder="email@example.com"
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="email"
+          required
+          placeholder="email@example.com"
         >
 
         <button
@@ -249,15 +263,27 @@
       </ul>
 
       <div class="footer__social">
-        <a class="footer__social-link" href="#">
+        <a
+          class="footer__social-link"
+          href="#"
+          aria-label="Facebook"
+        >
           <i class="fa-brands fa-facebook-f"></i>
         </a>
 
-        <a class="footer__social-link" href="#">
+        <a
+          class="footer__social-link"
+          href="#"
+          aria-label="Twitter"
+        >
           <i class="fa-brands fa-twitter"></i>
         </a>
         
-        <a class="footer__social-link" href="#">
+        <a
+          class="footer__social-link"
+          href="#"
+          aria-label="Instagram"
+        >
           <i class="fa-brands fa-instagram"></i>
         </a>
       </div>

@@ -20,15 +20,14 @@ main,
   width: 8rem;
 }
 
-.header__nav ul {
+.header__list {
   display: flex;
   flex-direction: row;
   gap: 1rem;
   font: var(--text-nav);
-  cursor: pointer;
 }
 
-.header__nav ul li:hover {
+.header__list li:hover {
   text-decoration: underline;
 }
 
@@ -47,18 +46,18 @@ main {
 }
 
 .hero__image {
+  position: relative;
   display: block;
   width: 90%;
   margin-inline: auto;
-  position: relative;
   z-index: 3;
 }
 
 .hero__curve {
+  position: relative;
   display: block;
   width: 100%;
   margin-top: -2.5rem;
-  position: relative;
   z-index: 2;
 }
 
@@ -66,28 +65,26 @@ main {
   display: grid;
   justify-items: center;
   gap: 2rem;
-  
-  background-color: var(--Navy-900);
   padding: 2rem 2.2rem 6rem;
+  background-color: var(--Navy-900);
 }
 
 .hero__title {
+  position: relative;
   margin-top: -8rem;
   font: var(--text-title);
-  position: relative;
   z-index: 2;
 }
 
 .hero__description {
   font: var(--text-description);
-
   padding-top: 2rem;
 }
 
 .hero__button {
   width: 24rem;
-  padding: 1.7rem 0;
   justify-self: center;
+  padding: 1.7rem 0;
   text-decoration: none;
   background: linear-gradient(90deg, var(--Teal-200),var(--Cyan-500));
   border-radius: 3rem;
@@ -116,12 +113,10 @@ main {
   position: absolute;
   width: 1px;
   height: 1px;
-
   margin: -1px;
   padding: 0;
-
-  overflow: hidden;
   border: 0;
+  overflow: hidden;
   clip-path: inset(50%);
 }
 
@@ -178,7 +173,7 @@ main {
   color: var(--Teal-200);
   border-bottom: 1px solid var(--Teal-200);
   border-color: currentColor;
-  transition: 0.3s;
+  transition: color 0.3s, border-color 0.3s;
 }
 
 .productive__link:hover {
@@ -190,11 +185,16 @@ main {
   display: grid;
   gap: 2rem;
   padding: 10rem 3.8rem 0 3.8rem;
+  line-height: 1.8rem;
   background-image: url("../images/bg-quotes.png");
   background-repeat: no-repeat;
   background-size: 2.5rem;
   background-position: top 7.8rem left 4rem;
-  line-height: 1.8rem;
+}
+
+.testimonial-cards {
+  display: grid;
+  gap: 2rem;
 }
 
 .testimonial-card {
@@ -205,7 +205,6 @@ main {
   line-height: 1.8rem;
   background-color: var(--Navy-800);
   border-radius: 0.6rem;
-
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.12);
 }
 
@@ -225,22 +224,22 @@ main {
   border-radius: 50%;
 }
 
-.testimonial-card__role,
-.early-access__input {
-  font: var(--text-input);
-}
-
 .testimonial-card__name {
   font: var(--text-card-name);
   font-weight: 900;
+}
+
+.testimonial-card__role,
+.early-access__input {
+  font: var(--text-input);
 }
 
 .early-access {
   position: relative;
   top: 15rem;
   display: grid;
-  gap: 2rem;
   justify-self: center;
+  gap: 2rem;
   width: 88%;
   padding: 3rem;
   background-color: var(--Navy-850);
@@ -277,7 +276,6 @@ main {
   gap: 2rem;
   padding: 17rem 3rem 3rem 3rem;
   font: var(--text-description);
-  /* background-color: var(--Navy-800); */
   background-color: var(--Navy-950);
 }
 
@@ -310,8 +308,7 @@ main {
 }
 
 .footer__links li {
-  width: fit-content;
-  cursor: pointer;
+  display: inline-flex;
   transition: color 0.2s ease, font-weight 0.2s ease;
 }
 
@@ -327,21 +324,18 @@ main {
 .footer__social {
   display: flex;
   gap: 1rem;
-  padding-top: 4rem;
   justify-content: center;
+  padding-top: 4rem;
 }
 
 .footer__social-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  
   width: 3.2rem;
   height: 3.2rem;
-
   color: var(--White);
   text-decoration: none;
-  
   border: 1px solid var(--White);
   border-radius: 50%;
   transition: color 0.3s, border-color 0.3s;
@@ -357,11 +351,6 @@ main {
 }
 
 @media screen and (min-width: 1024px) {
-  body {
-    /* background-color: var(--Navy-950); */
-    background-color: white;
-  }
-
   .header,
   main,
   .footer {
@@ -377,7 +366,7 @@ main {
     width: 12rem;
   }
 
-  .header__nav ul {
+  .header__list {
     gap: 3rem;
     font-size: clamp(1.2rem, 4vw, 1.4rem);
   }
@@ -398,35 +387,27 @@ main {
   }
 
   .hero__content {
-    /* gap: 2.2rem; */
     align-content: space-around;
     margin-top: 8rem;
     background-color: transparent;
   }
 
   .hero__title {
-    width: 52rem;
-    font-size: clamp(2.3rem, 6vw, 3rem);
-
     position: relative;
-    /* margin-top: -47rem; */
+    width: 52rem;
+    font-size: clamp(2.3rem, 2vw, 3rem);
   }
   
   .hero__description {
+    position: relative;
     width: 48rem;
     font-size: clamp(1.4rem, 4vw, 1.6rem);
-    background-color: var(--Navy-800);
-
-    position: relative;
-    /* top: -38rem; */
-    background-color: transparent;
     z-index: 100;
   }
 
   .hero__button {
     width: 28rem;
     font-size: clamp(1.2rem, 4vw, 1.6rem);
-
     z-index: 100;
   }
 
@@ -439,7 +420,6 @@ main {
 
   .feature-card {
     justify-content: center;
-    width: fit-content;
   }
 
   .feature-card__icon {
@@ -469,7 +449,7 @@ main {
 
   .productive__title {
     width: 30rem;
-    font-size: clamp(1.4rem, 6vw, 2.6rem);
+    font-size: clamp(1.4rem, 2vw, 2.6rem);
   }
 
   .testimonials {
@@ -488,7 +468,7 @@ main {
   }
 
   .testimonial-card__text {
-    font-size: clamp(1rem, 6vw, 1.2rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
   }
 
   .early-access {
@@ -499,7 +479,7 @@ main {
   }
 
   .early-access__title {
-    font-size: clamp(1.4rem, 6vw, 2.2rem);
+    font-size: clamp(1.4rem, 2vw, 2.2rem);
   }
 
   .early-access__description {
@@ -557,12 +537,123 @@ main {
     margin-top: 0;
   }
 
-  .footer__links li {
-    width: fit-content;
-  }
-
   .footer__social {
     align-self: flex-start;
     padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header,
+  main,
+  .footer {
+    width: min(100%, 144rem);
+  }
+
+  .header {
+    padding: 5rem;
+  }
+
+  .header__logo {
+    width: 14rem;
+  }
+
+  .header__list {
+    gap: 5rem;
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
+  }
+
+  .hero {
+    padding-bottom: 10rem;
+    background-position: 50% 105%;
+  }
+
+  .hero__image {
+    width: 52rem;
+  }
+
+  .hero__content {
+    margin-top: 10rem;
+    background-color: transparent;
+  }
+
+  .hero__title {
+    width: 58rem;
+    font-size: clamp(3rem, 2vw, 3.4rem);
+  }
+
+  .hero__description {
+    width: 56rem;
+    font-size: clamp(1.6rem, 2vw, 1.8rem);
+  }
+
+  .hero__button {
+    width: 28rem;
+    font-size: clamp(1.6rem, 4vw, 1.8rem);
+  }
+
+  .features,
+  .productive,
+  .testimonials {
+    padding-block: 10rem;
+  }
+
+  .feature-card__icon {
+    width: fit-content;
+  }
+
+  .feature-card__title {
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+  }
+
+  .feature-card__description,
+  .productive__link {
+    font-size: clamp(1.4rem, 4vw, 1.6rem);
+  }
+
+  .productive__image {
+    width: 56rem;
+  }
+
+  .productive__content {
+    gap: 2.2rem;
+    padding-inline: 2rem;
+  }
+
+  .productive__title {
+    font-size: clamp(2.6rem, 2vw, 3rem);
+  }
+
+  .productive__description {
+    font-size: clamp(1.4rem, 2vw, 2rem);
+  }
+
+  .testimonials {
+    background-size: 4rem;
+  }
+
+  .testimonial-card {
+    padding: 3rem;
+  }
+
+  .testimonial-card__text {
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+  }
+
+  .testimonial-card__avatar {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .testimonial-card__name {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+  }
+
+  .testimonial-card__role {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .early-access {
+    width: 54%;
   }
 }
