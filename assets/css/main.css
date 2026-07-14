@@ -5,8 +5,8 @@ body {
 .header,
 main,
 .footer {
-  justify-self: center;
   width: min(100%, 33.5rem);
+  margin-inline: auto;
 }
 
 .header {
@@ -27,13 +27,14 @@ main,
   font: var(--text-nav);
 }
 
-.header__list li:hover {
-  text-decoration: underline;
-}
-
-.header__nav a {
+.header__list a {
   text-decoration: none;
   color: var(--White);
+}
+
+.header__list a:hover,
+.header__list a:focus-visible {
+  text-decoration: underline;
 }
 
 main {
@@ -92,7 +93,9 @@ main {
 }
 
 .hero__button:hover,
-.early-access__button:hover {
+.hero__button:focus-visible,
+.early-access__button:hover,
+.early-access__button:focus-visible {
   background-color: var(--Teal-200);
   filter: brightness(1.15);
 }
@@ -176,7 +179,8 @@ main {
   transition: color 0.3s, border-color 0.3s;
 }
 
-.productive__link:hover {
+.productive__link:hover,
+.productive__link:focus-visible {
   color: var(--White);
   border-color: var(--White);
 }
@@ -308,7 +312,6 @@ main {
 }
 
 .footer__links li {
-  display: inline-flex;
   transition: color 0.2s ease, font-weight 0.2s ease;
 }
 
@@ -317,7 +320,8 @@ main {
   color: var(--White);
 }
 
-.footer__links a:hover {
+.footer__links a:hover,
+.footer__links a:focus-visible {
   font-weight: 700;
 }
 
@@ -341,7 +345,8 @@ main {
   transition: color 0.3s, border-color 0.3s;
 }
 
-.footer__social-link:hover {
+.footer__social-link:hover,
+.footer__social-link:focus-visible {
   color: var(--Teal-200);
   border-color: var(--Teal-200);
 }
@@ -350,11 +355,17 @@ main {
   font-size: 1.2rem;
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--Teal-200);
+  outline-offset: 4px;
+}
+
 @media screen and (min-width: 1024px) {
   .header,
   main,
   .footer {
-    justify-self: center;
     width: min(100%, 102.4rem);
   }
 
@@ -530,11 +541,13 @@ main {
   }
 
   .footer__contact {
+    justify-self: flex-end;
     align-content: start;
   }
 
   .footer__links {
     margin-top: 0;
+    justify-self: flex-end;
   }
 
   .footer__social {
