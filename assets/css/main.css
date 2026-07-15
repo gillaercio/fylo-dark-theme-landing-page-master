@@ -259,6 +259,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+  margin-bottom: 1.5rem;
 }
 
 .early-access__input,
@@ -273,6 +274,10 @@ main {
   background: linear-gradient(90deg, var(--Teal-200),var(--Cyan-500));
   transition: background-color 0.3s;
   cursor: pointer;
+}
+
+.input-error {
+  color: var(--Red-500);
 }
 
 .footer {
