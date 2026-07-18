@@ -253,6 +253,7 @@ main {
 
 .early-access__description {
   font: var(--text-description);
+  margin-bottom: 1.5rem;
 }
 
 .early-access__form {
@@ -260,6 +261,12 @@ main {
   flex-direction: column;
   gap: 1.6rem;
   margin-bottom: 1.5rem;
+}
+
+.early-access__field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .early-access__input,
@@ -276,8 +283,19 @@ main {
   cursor: pointer;
 }
 
+.input-error,
+.input-success {
+  padding-left: 2rem;
+  font: var(--text-input);
+  text-align: left;
+}
+
 .input-error {
   color: var(--Red-500);
+}
+
+.input-success {
+  color: var(--Teal-200);
 }
 
 .footer {
@@ -510,12 +528,19 @@ input:focus-visible {
     width: 80%;
     margin-inline: auto;
   }
+  
+  .early-access__field {
+    display: flex;
+  }
 
   .early-access__input {
-    width: 70%;
+    align-self: center;
+    width: 100%;
+    font-weight: 700;
   }
 
   .early-access__button {
+    align-self: flex-start;
     padding-inline: 1.8rem;
   }
 

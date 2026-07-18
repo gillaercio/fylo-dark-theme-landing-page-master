@@ -182,15 +182,18 @@
         >
           Email address
         </label>
-        <input
-          class="early-access__input"
-          type="email"
-          name="email"
-          id="email"
-          autocomplete="email"
-          required
-          placeholder="email@example.com"
-        >
+        <div class="early-access__field">
+          <input
+            class="early-access__input"
+            type="email"
+            name="email"
+            id="email"
+            autocomplete="email"
+            required
+            placeholder="email@example.com"
+          >
+          <small id="error-email" class="error-message sr-only"></small>
+        </div>
 
         <button
           class="early-access__button"
@@ -199,7 +202,6 @@
           Get Started For Free
         </button>
       </form>
-      <small id="error-email" class="error-message sr-only"></small>
     </section>
   </main>
 
